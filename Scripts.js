@@ -1,3 +1,57 @@
+//Ejercicio 2 Objetos necesarios para el ejercicio
+class UsuarioWeb{
+  constructor(login,contraseña,nombre,DNI){
+    this._login = login;
+    this._contraseña = contraseña;
+    this._nombre = nombre;
+    this._DNI = DNI;
+  }
+
+}
+class UsuarioGestor extends UsuarioWeb{
+  constructor(login,contraseña,nombre,DNI){
+    super(login,contraseña,nombre,DNI);
+
+  }
+}
+class UsuarioCliente extends UsuarioWeb{
+  constructor(login,contraseña,nombre,DNI,peso,altura,edad,sexo){
+    super(login,contraseña,nombre,DNI);
+    this._peso = peso;
+    this._altura = altura;
+    this._edad = edad;
+    this._sexo = sexo;
+
+  }
+}
+class Empleados{
+  constructor(nombre,DNI,telefono){
+    this._DNI = DNI;
+    this._nombre = nombre;
+    this._telefono = telefono;
+
+  }
+}
+class monitores extends Empleados{
+  constructor(nombre,DNI,telefono,actividades,nsesiones){
+    super(nombre,DNI,telefono);
+    this._actividades = actividades;
+    this._nsesiones = nsesiones;
+
+    
+  }
+}
+class fisios extends Empleados{
+  constructor(nombre,DNI,telefono){
+    super(nombre,DNI,telefono);
+  }
+  
+}
+
+
+
+
+
 
 //Scripts de lo referente a las tablas Separados por pagina HTML
 
