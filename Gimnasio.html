@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+
+	<script src="Scripts.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css.css">
+
+</head>
+
+<body onload="medicos();deportes();">
+
+
+	<pre> Gimnasio </pre>
+	<div id="cabecera">
+
+
+		<nav>
+			<ul>
+				<li><a href="Password.html"> Contraseña</a></li>
+				<li><a href="Gimnasio.html"> Gimnasio </a></li>
+				<li><a href="FCM.html"> FCM</a></li>
+				<li><a href="IMC.html"> IMC</a></li>
+
+			</ul>
+		</nav>
+	</div>
+
+
+	<br>
+	<br>
+	<br>
+	<h3>Tabla de Deportes</h3>
+
+
+
+	<table id="table">
+	</table>
+	<br>
+	<form id="form">
+		<input id="radio1" type="radio" name="2" onclick="pintar('Baloncesto',1)" />Baloncesto <br>
+		<input id="radio2" type="radio" name="2" onclick="pintar('Yoga',2)" />Yoga <br>
+		<input id="radio3" type="radio" name="2" onclick="pintar('Futbol',3)" />Fútbol <br>
+		<input id="radio4" type="radio" name="2" onclick="pintar('Tenis',4)" />Tenis <br>
+	</form>
+	<br>
+	<button onclick="deportes()">Nueva tabla de actividades</button>
+	<br><br>
+	<h3>Tabla de Fisios</h3>
+	<table id="table2">
+	</table>
+	<br>
+	<form id="form2">
+		<input id="radio5" type="radio" name="1" onclick="marcarfisios('Jose',5)" />Jose <br>
+		<input id="radio6" type="radio" name="1" onclick="marcarfisios('Pepelu',6)" />Pepelu <br>
+		<input id="radio7" type="radio" name="1" onclick="marcarfisios('Rodrigo',7)" />Rodrigo <br>
+		<input id="radio8" type="radio" name="1" onclick="marcarfisios('Mario',8)" />Mario <br>
+		<input id="radio9" type="radio" name="1" onclick="marcarfisios('Edu',9)" />Edu <br>
+
+	</form>
+	<br>
+	<button onclick="medicos()">Nueba tabla de Fisioterapeutas</button>
+	<br>
+
+</html>

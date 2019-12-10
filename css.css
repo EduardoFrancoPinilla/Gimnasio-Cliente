@@ -1,0 +1,82 @@
+body{
+background-color:lightblue;
+padding: 1%;
+font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+}
+
+
+pre{
+	font-size:30px;
+	color:darkblue;
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+}
+
+
+
+
+header{
+	
+	width:40%;
+	float:left;
+	font-size:22px;
+}
+
+p{
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+
+}
+
+li{
+	float:right;
+	margin-right: 15px;
+	list-style-type: none;
+	text-align:right;
+	font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
+
+}
+
+nav{
+		width:60%;
+		float:right;
+		font-size:24px;
+		font-family:dayrom;
+}
+
+a{
+	text-align:right;
+}
+a:link {
+  color: darkblue;
+   text-decoration: none;
+}
+
+
+
+
+#footer3 header{
+	position:relative;
+	
+	
+}
+.subheader{
+	padding-top:30px;
+}
+#footerEntero{
+	overflow:auto;
+}
+
+#friends1 {
+	width:40%;
+	float:left;
+	position:relative;
+	left:-240px;
+}
+
+#friends2 p{
+	margin-bottom:0px;
+	margin-top:5px;
+	position:relative;
+	left:-250px;
+
+}
+
