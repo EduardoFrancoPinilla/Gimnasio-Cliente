@@ -31,6 +31,9 @@ class Empleados{
     this._telefono = telefono;
 
   }
+  get descripcion(){
+    return("El DNI del empleado es: "+this._DNI+" Se llama: "+this._nombre+ " Con telefono: "+this._telefono );
+  }
 }
 class monitores extends Empleados{
   constructor(nombre,DNI,telefono,actividades,nsesiones){
