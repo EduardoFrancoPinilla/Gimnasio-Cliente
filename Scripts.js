@@ -50,8 +50,96 @@ class fisios extends Empleados{
   }
   
 }
+function recoger() {
+    var f =document.forms["f1"];
+    nombreM = f.elements["nombre"].value;
+    DNIM = f.elements["DNI"].value;
+    telefonoM = f.elements["telefono"].value;
+    actividadesM = f.elements["actividades"].value;
+    nsesionesM = f.elements["nsesiones"].value;
+    
 
+    
+    
+}
 
+/* 
+function newarticulo() {
+      var newtr = document.createElement("tr"); 
+    var f=document.forms["formarticulos"];
+    codigoA = f.elements["codigo"].value;
+    nombreA = f.elements["nombre"].value;
+
+    localizacionA = f.elements["localizacion"].value;
+
+    precioA = f.elements["precio"].value;
+    duracionA = f.elements["duracion"].value;
+    var fecha = /^([012]?[1-9]|3[01])(\/)(0[1-9]|1[012])\2(\d{4})$/;
+    fechaA = f.elements["fecha"].value;
+    if(fecha.test(fechaA)){
+        fechaA = f.elements["fecha"].value;
+    }else{
+        fechaA =new Date();
+    }
+   
+    if( f.elements["duracion"].value == null ||f.elements["duracion"].value == "" ){
+        producto = new Articulo( codigoA,nombreA,localizacionA,precioA);
+
+		var newtd = document.createElement("td"); 
+        var newContent = document.createTextNode(nombreA);
+        newtd.appendChild(newContent);
+		newtr.appendChild(newtd);
+        var newtd2 = document.createElement("td"); 
+        var newContent2 = document.createTextNode(codigoA);
+        newtd2.appendChild(newContent2);
+        newtr.appendChild(newtd2);
+        var newtd3 = document.createElement("td"); 
+        var newContent3 = document.createTextNode(localizacionA);
+        newtd3.appendChild(newContent3);
+        newtr.appendChild(newtd3);
+        var newtd4 = document.createElement("td"); 
+        var newContent4 = document.createTextNode(precioA);
+        newtd4.appendChild(newContent4);
+        newtr.appendChild(newtd4);
+        
+        document.getElementById("tabla").appendChild(newtr);
+    }else{
+        producto = new ProductoFresco( codigoA,nombreA,localizacionA,precioA,fechaA,duracionA);
+
+		var newtd = document.createElement("td"); 
+        var newContent = document.createTextNode(nombreA);
+        newtd.appendChild(newContent);
+		newtr.appendChild(newtd);
+        var newtd2 = document.createElement("td"); 
+        var newContent2 = document.createTextNode(codigoA);
+        newtd2.appendChild(newContent2);
+        newtr.appendChild(newtd2);
+        var newtd3 = document.createElement("td"); 
+        var newContent3 = document.createTextNode(localizacionA);
+        newtd3.appendChild(newContent3);
+        newtr.appendChild(newtd3);
+        var newtd4 = document.createElement("td"); 
+        var newContent4 = document.createTextNode(precioA);
+        newtd4.appendChild(newContent4);
+        newtr.appendChild(newtd4);
+        var newtd5 = document.createElement("td"); 
+        var newContent5 = document.createTextNode(fechaA);
+        newtd5.appendChild(newContent5);
+        newtr.appendChild(newtd5);
+        var newtd6 = document.createElement("td"); 
+        var newContent6 = document.createTextNode(duracionA);
+        newtd6.appendChild(newContent6);
+        newtr.appendChild(newtd6);
+        
+        document.getElementById("tabla").appendChild(newtr);
+    }
+   
+  
+    art.push(producto);
+    opciones(producto);
+}
+window.onload = inicializar;
+*/
 
 
 
