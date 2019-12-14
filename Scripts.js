@@ -1,7 +1,8 @@
 //Ejercicio 2 Objetos necesarios para el ejercicio
+arraysesiones = [];
 class UsuarioWeb{
-  constructor(login,contraseña,nombre,DNI){
-    this._login = login;
+  constructor(contraseña,nombre,DNI){
+    
     this._contraseña = contraseña;
     this._nombre = nombre;
     this._DNI = DNI;
@@ -9,58 +10,170 @@ class UsuarioWeb{
 
 }
 class UsuarioGestor extends UsuarioWeb{
-  constructor(login,contraseña,nombre,DNI){
-    super(login,contraseña,nombre,DNI);
+  constructor(contraseña,nombre,DNI){
+    super(contraseña,nombre,DNI);
+    
 
+  }
+  descripcion(){
+    return("Nombre: "+this._nombre+" Contraseña: "+this._contraseña+" DNI: "+this._DNI);
   }
 }
 class UsuarioCliente extends UsuarioWeb{
-  constructor(login,contraseña,nombre,DNI,peso,altura,edad,sexo){
-    super(login,contraseña,nombre,DNI);
+  constructor(contraseña,nombre,DNI,peso,altura,edad,sexo){
+    super(contraseña,nombre,DNI);
     this._peso = peso;
     this._altura = altura;
     this._edad = edad;
     this._sexo = sexo;
-
+    
+  }
+   descripcion(){
+    return("Nombre: "+this._nombre+" Contraseña: "+this._contraseña+" DNI: "+this._DNI+" Peso: "+this._peso+ " Altura: "+this._altura+" Edad:"+this._edad+" Sexo: "+ this._sexo);
   }
 }
 class Empleados{
-  constructor(nombre,DNI,telefono){
+  constructor(nombree,DNI,telefono){
     this._DNI = DNI;
-    this._nombre = nombre;
+    this._nombree = nombree;
     this._telefono = telefono;
 
   }
-  get descripcion(){
-    return("El DNI del empleado es: "+this._DNI+" Se llama: "+this._nombre+ " Con telefono: "+this._telefono );
+   descripcion(){
+    return("El DNI del empleado es: "+this._DNI+" Se llama: "+this._nombree+ " Con telefono: "+this._telefono );
   }
 }
 class monitores extends Empleados{
-  constructor(nombre,DNI,telefono,actividades,nsesiones){
-    super(nombre,DNI,telefono);
+  constructor(nombree,DNI,telefono,actividades,nsesiones){
+    super(nombree,DNI,telefono);
     this._actividades = actividades;
     this._nsesiones = nsesiones;
 
     
   }
+   descripcion(){
+    return("Nombre: "+this._nombree+" DNI: "+this._DNI+" Telefono: "+this._telefono+" Actividades: "+this.actividades+ " Numero de sesiones: "+this._nsesiones);
+  }
 }
 class fisios extends Empleados{
-  constructor(nombre,DNI,telefono){
-    super(nombre,DNI,telefono);
+  constructor(nombree,DNI,telefono){
+    super(nombree,DNI,telefono);
+  }
+   descripcion(){
+    return("Nombre: "+this._nombree+" DNI: "+this._DNI+" Telefono: "+this._telefono);
   }
   
 }
-function recoger() {
+class salas{
+  constructor(capacidad,nsala){
+    this._capacidad = capacidad;
+    this._nsala= nsala;
+
+  }
+  descripcion(){
+    return("Capacidad de la sala: "+this._capacidad+" Numero de la sala: "+this._nsala);
+  }
+}
+class actividades{
+  constructor(actividad,sesiones,sala){
+    this._actividad = actividad;
+    this._sesiones = sesiones;
+    this._sala = sala;
+  }
+  descripcion(){
+    return("Nombre de la actividad: "+this._actividad+" Numero de sesiones: "+this._sesiones+" Numero de la sala: " +this._sala);
+  }
+}
+function recogeractividad() {
+  var f =document.forms["f1"];
+  actividad = f.elements["actividad"].value;
+  sesiones = f.elements["sesiones"].value;
+  sala = f.elements["sala"].value;
+  multi = sesiones*7;
+  if(multi<43){
+  actividades = new actividades(actividad,sesiones,sala);
+  var li = document.createElement("LI");
+
+  
+  document.getElementById("listaU").appendChild(li);
+  li.innerHTML = actividades.descripcion();
+}else{
+  alert("Reduzca el numero de sesiones.");
+}
+}
+function recogersala() {
+  var f =document.forms["f2"];
+  capacidad = f.elements["capacidad"].value;
+  nsala = f.elements["nsala"].value;
+
+  sala = new salas(capacidad,nsala);
+  var li = document.createElement("LI");
+
+  
+  document.getElementById("listaG").appendChild(li);
+  li.innerHTML = sala.descripcion();
+
+}
+
+
+function recogerEmpleado() {
     var f =document.forms["f1"];
     nombreM = f.elements["nombre"].value;
     DNIM = f.elements["DNI"].value;
     telefonoM = f.elements["telefono"].value;
     actividadesM = f.elements["actividades"].value;
     nsesionesM = f.elements["nsesiones"].value;
-    
 
+    if( actividadesM != "" || 
+    nsesionesM != "" ){
+    Monitor = new monitores(nombreM,DNIM,telefonoM,actividadesM,nsesionesM);
+    var li = document.createElement("LI");
+  
     
+    document.getElementById("listaU").appendChild(li);
+    li.innerHTML = Monitor.descripcion();
+
+  }else{
+    Fisio = new fisios(nombreM,DNIM,telefonoM);
+    var li = document.createElement("LI");
+   
     
+    document.getElementById("listaG").appendChild(li);
+    li.innerHTML =Fisio.descripcion() ;
+  }
+    
+}
+
+function recogerUsuario() {
+  var f = document.forms["f2"];
+  contraseñaU = f.elements["password"].value;
+  nombreU = f.elements["nombre"].value;
+ 
+  DNIU = f.elements["DNI"].value;
+  pesoU = f.elements["peso"].value;
+  alturaU = f.elements["altura"].value;
+  edadU = f.elements["edad"].value;
+  sexoU = f.elements["sexo"].value;
+
+
+  if(  pesoU != "" || alturaU != "" || 
+    edadU != "" ){
+  Usuario = new UsuarioCliente(contraseñaU,nombreU,DNIU,pesoU,alturaU,edadU,sexoU);
+    var li = document.createElement("LI");
+  
+    
+    document.getElementById("listaU").appendChild(li);
+    li.innerHTML = Usuario.descripcion();
+
+  }else{
+    Usuario = new UsuarioGestor(contraseñaU,nombreU,DNIU);
+    var li = document.createElement("LI");
+   
+    
+    document.getElementById("listaG").appendChild(li);
+    li.innerHTML = Usuario.descripcion();
+  }
+  
 }
 
 /* 

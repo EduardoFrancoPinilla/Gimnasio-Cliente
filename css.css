@@ -26,14 +26,6 @@ p{
 
 }
 
-li{
-	float:right;
-	margin-right: 15px;
-	list-style-type: none;
-	text-align:right;
-	font-family: Arial,Helvetica Neue,Helvetica,sans-serif; 
-
-}
 
 nav{
 		width:60%;
@@ -79,4 +71,5 @@ a:link {
 	left:-250px;
 
 }
+
 

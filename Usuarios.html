@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<script src="Scripts.js"></script>
+
+	<link rel="stylesheet" type="text/css" href="css.css">
+
+</head>
+
+<body>
+
+
+	<pre> Gimnasio </pre>
+	<div id="cabecera">
+
+
+		<nav>
+			<ul>
+				<li><a href="Password.html"> Contraseña</a></li>
+				<li><a href="Gimnasio.html"> Gimnasio </a></li>
+				<li><a href="FCM.html"> FCM</a></li>
+                <li><a href="IMC.html"> IMC</a></li>
+				<li><a href="Usuarios.html"> Usuarios</a></li>
+				<li><a href="Empleados.html"> Empleados</a></li>
+				<li><a href="Actividades.html"> Actividades</a></li>
+
+			</ul>
+		</nav>
+
+
+	</div>
+
+
+	<h1>Introduzca los datos del Usuario: </h1>
+	
+	<br><br>
+	<form id="f2">
+        
+		<br>
+		Nombre del Usuario : <input id="nombre" type="text" />
+		<br>
+		<br>
+		Contraseña del Usuario : <input id="password" type="text" />
+		<br>
+		<br>
+		DNI del Usuario : <input id="DNI" type="text" />
+		<br>
+		<br>
+		Peso del Usuario(Si es Web) : <input id="peso" type="text" />
+		<br>
+		<br>
+		Altura del Usuario(Si es Web) : <input id="altura" type="text" />
+		<br>
+		<br>
+		Edad del Usuario(Si es Web) : <input id="edad" type="text" />
+		<br>
+		<br>
+		<select name="sexo" id="sexo">
+			<option value="hombre">Hombre</option>
+			<option value="mujer">Mujer</option>
+		</select>
+		
+
+    <input type="button" value="Añadir Usuario" onclick="recogerUsuario()"/>
+	</form>
+	<br>
+	<br>
+	<h1>Lista de Usuarios Web</h1>
+	<ul id="listaU">
+
+	</ul>
+	<br>
+	<br>
+	<h1>Lista de Gestores Web</h1>
+	<ul id="listaG">
+
+	</ul>
+</body>
+
+</html>

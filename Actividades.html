@@ -32,7 +32,7 @@
 	</div>
 
 
-	<h1>Introduzca los datos del Empleado: </h1>
+	<h1>ACTIVIDADES </h1>
 	
 	<br><br>
 
@@ -40,34 +40,43 @@
 	<form id="f1">
 
         <br>
-		Nombre del Monitor/Fisio : <input id="nombre" type="text" />
+		Nombre de la actividad : <input id="actividad" type="text" />
 		<br>
 		<br>
 		
-		DNI del Monitor/Fisio : <input id="DNI" type="text" />
+		Numero de sesiones : <input id="sesiones" type="number" />
 		<br>
         <br>
-        Telefono del Monitor/Fisio : <input id="telefono" type="text" />
-		<br>
-        <br>
-        Actividades que imparte(Solo si es monitor) : <input id="actividades" type="text" />
-        <br>
-        <br>
-        Numero de sesiones(Solo si es monitor) : <input id="nsesiones" type="text" />
+        Numero de la sala : <input id="sala" type="number" />
         <br>
         <br>
 
 
-		<input type="button" value="Añadir Empleado" onclick="recogerEmpleado()"/>
+		<input type="button" value="Añadir Actividad" onclick="recogeractividad()"/>
 	</form>
 	<br>
-	<h1>Lista de Fisios</h1>
+	<h1>Lista de Actividades</h1>
 	<ul id="listaU">
 
 	</ul>
 	<br>
-	<br>
-	<h1>Lista de Monitores</h1>
+    <br>
+    <h1>SALAS</h1>
+    <form id="f2">
+
+        <br>
+		Capacidad de la sala : <input id="capacidad" type="text" />
+		<br>
+		<br>
+		
+		Numero de sala : <input id="nsala" type="text" />
+        <br>
+        <br>
+
+
+		<input type="button" value="Añadir Sala" onclick="recogersala()"/>
+	</form>
+	<h1>Lista de Salas</h1>
 	<ul id="listaG">
 
 	</ul>
